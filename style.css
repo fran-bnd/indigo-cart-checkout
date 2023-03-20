@@ -1,0 +1,159 @@
+/* Heading styles */
+h1 {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  html {
+    background-color: rgb(244, 244, 189);
+  }
+
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    font-size: 24px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 60%;
+    max-width: 400px;
+  }
+  
+  button[type="submit"],
+  button {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(244, 161, 19);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: rgb(247, 184, 52);
+  }
+  
+  /* Select styles */
+  select {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 60%;
+    max-width: 400px;
+  }
+  
+  /* List styles */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid rgb(244, 161, 19);
+    border-radius: 5px;
+  }
+  
+  /* Button styles */
+  #viewAllListsBtn {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(244, 161, 19);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #viewAllListsBtn:hover {
+    background-color: rgb(247, 184, 52);
+  }
+  
+  #createListBtn,
+  #viewListBtn,
+  #addGear,
+  #removeGear {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 28px;
+    }
+    
+    label {
+      font-size: 20px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+      font-size: 20px;
+      padding: 6px;
+      margin-bottom: 10px;
+    }
+    
+    button[type="submit"],
+    button {
+      font-size: 20px;
+      padding: 6px;
+    }
+    
+    li {
+      font-size: 20px;
+    }
+    
+    #createListBtn,
+    #viewListBtn,
+    #addGear,
+    #removeGear {
+      max-width: none;
+    }
+  }
+  
