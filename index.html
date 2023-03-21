@@ -8,36 +8,41 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>CHECOUT CART</h1>
-            <h2>1. Create or Select a Checkout List</h2>
+        <div>
+            <h1>CHECKOUT CART</h1>  
+        </div>
+        <div>
+            <h2>1. Create or Select an Order</h2>
             <form id="packingListForm">
                 <input type="text" id="packingListName" name="packingListName" placeholder="Name...">
-                <button type="submit" id="createListBtn">Create List</button>
-            </form>
-            
-            <div id="packingListSelection">
+                <button type="submit" id="createListBtn">Create Order</button>
                 <select id="listSelect"></select>
-                <button id="viewListBtn">View List</button>
-            </div>
-            
-            <h2>2. Add Items to the Checkout List</h2>
-            <form id="addGearForm">
-                <input type="text" id="gearName" name="gearName" placeholder="Gear name..."><br>
-                <input type="text" id="gearPlacement" name="gearPlacement" placeholder="Gear placement..."><br>
-                <input type="text" id="gearUse" name="gearUse" placeholder="Gear use..."><br>
-                <button type="submit" id="addGear">Add Gear</button>
+                <button id="viewListBtn">View Order</button>
             </form>
-            
-            <h2>4. Remove Items from the Checkout List</h2>
-            <form id="removeGearForm">
-                <input type="number" id="gearIndex" name="gearIndex" min="0" placeholder="Index of Gear to Remove"><br>
-                <button type="submit" id="removeGear">Remove Gear</button>
-            </form>
-            
-            <h2>4. See All Checkout Lists</h2>
-                <button id="viewAllListsBtn">View All Lists</button>
-                <ul id="listDisplay"></ul>
+        </div>
         
+        <div>
+            <h2>2. Add Products to the Order</h2>
+            <form id="addGearForm">
+                <input type="text" id="gearName" name="gearName" placeholder="Product name..."><br>
+                <input type="text" id="gearPlacement" name="gearPlacement" placeholder="Product placement..."><br>
+                <input type="number" id="gearQty" name="gearQty" placeholder="Product quantity..."><br>
+                <button type="submit" id="addGear">Add Product</button>
+            </form>
+            
+            <h2>3. Remove Products from the Order</h2>
+            <form id="removeGearForm">
+                <input type="number" id="gearIndex" name="gearIndex" min="0" placeholder="Index of Product to Remove"><br>
+                <button type="submit" id="removeGear">Remove Product</button>
+            </form>
+        </div>
+        
+        <div>
+            <h2>4. See All Orders</h2>
+                <button id="viewAllListsBtn">View All Orders</button>
+                <ul id="listDisplay"></ul>
+            </div>
+
         <script src="app.js"></script>
 
     </body>

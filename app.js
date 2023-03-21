@@ -1,41 +1,41 @@
 
-// creating a class to hold a new piece of gear for some use.
-class Gear {
-  constructor(name, placement, use) {
+// creating a class to hold a new product for some use.
+class Product {
+  constructor(name, placement, qty) {
     this.name = name;
     this.placement = placement;
-    this.use = use;
+    this.qty = qty;
   }
-  // this describes the piece of gear created in an instance
+  // this describes the piece of product created in an instance
   describe() {
-    return `${this.name} is ${this.placement} for ${this.use}.`;
+    return `${this.name} is ${this.placement} for ${this.qty}.`;
   }
 }
 
-// create a second class that relates to the first class in this case a new packing list.
-class PackingList {
+// create a second class that relates to the first class in this case a new order.
+class Order {
   constructor(name) {
     this.name = name;
     this.gearList = [];
   }
-  // this is adding and instance of gear to the new packing list from the Gear class
+  // this is adding and instance of gear to the new order list from the product class
   addGear(gear) {
-    if (gear instanceof Gear) {
+    if (gear instanceof Product) {
       this.gearList.push(gear);
     } else {
-      throw new Error(`You can only add and instance of Gear. Argument is not gear: ${gear}`);
+      throw new Error(`You can only add and instance of a Product. Argument is not Product: ${gear}`);
     }
   }
   removeGear(index) {
     if (index < 0 || index >= this.gearList.length) {
-      throw new Error(`Index ${index} is out of range for gearList.`);
+      throw new Error(`Index ${index} is out of range for List.`);
     }
     this.gearList.splice(index, 1);
   }
 
   // this describes how many items of gear are in the list.
   describe() {
-    return `${this.name} has ${this.gearList.length} items of gear.`;
+    return `${this.name} has ${this.gearList.length} items of Product.`;
   }
 }
 
@@ -51,7 +51,7 @@ const listDisplay = document.getElementById("listDisplay");
 const addGearForm = document.getElementById("addGearForm");
 const gearName = document.getElementById("gearName");
 const gearPlacement = document.getElementById("gearPlacement");
-const gearUse = document.getElementById("gearUse");
+const gearQty = document.getElementById("gearQty");
 const addGearBtn = document.getElementById("addGear");
 const removeGearBtn = document.getElementById("removeGear");
 const gearIndex = document.getElementById("gearIndex");
@@ -73,13 +73,13 @@ function createPackingList(name) {
   option.value = name;
   listSelect.add(option); // add option to select element
   packingListNameInput.value = ""; // clear input field
-  packingLists.push(new PackingList(name)); // create new object 'PackingList' in the array
+  packingLists.push(new Order(name)); // create new object 'PackingList' in the array
 }
 
 // add event listener to view packing list button
 viewListBtn.addEventListener("click", function(event) {
   let selectedList = listSelect.value;
-  alert(`Viewing packing list "${selectedList}".`);
+  alert(`Viewing order "${selectedList}".`);
 });
 
 // add event listener to view all lists button
@@ -87,7 +87,7 @@ viewAllListsBtn.addEventListener("click", function(event) {
   listDisplay.innerHTML = ""; // clear listDisplay
   packingLists.forEach(function(list) {
     let li = document.createElement("li");
-    li.textContent = `${list.name}: ${list.describe()} Gear List: ${list.gearList.map(gear => gear.name).join(", ")}`;
+    li.textContent = `${list.name}: ${list.describe()} Product List: ${list.gearList.map(gear => gear.name).join(", ")}`;
     listDisplay.appendChild(li);
   });
 });
@@ -95,12 +95,12 @@ viewAllListsBtn.addEventListener("click", function(event) {
 // add event listener to add gear button
 addGearBtn.addEventListener("click", function(event) {
   event.preventDefault(); // prevent form submission
-  let gear = new Gear(gearName.value, gearPlacement.value, gearUse.value);
+  let gear = new Product(gearName.value, gearPlacement.value, gearQty.value);
   let selectedListIndex = listSelect.selectedIndex;
   packingLists[selectedListIndex].addGear(gear);
   gearName.value = ""; // clear input field
   gearPlacement.value = ""; // clear input field
-  gearUse.value = ""; // clear input field
+  gearQty.value = ""; // clear input field
 });
 
 // remove event listener to add gear button

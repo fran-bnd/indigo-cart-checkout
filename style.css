@@ -1,139 +1,146 @@
 /* Heading styles */
 h1 {
-    font-size: 48px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  h2 {
+  font-size: 48px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(52, 50, 50);
+}
+
+h2 {
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(84, 83, 83);
+}
+
+html {
+  background-color: rgba(242, 242, 200, 0.762);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Updated styles for div */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: rgba(247, 184, 52, 0.5);
+  padding: 5px;
+}
+
+label {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  width: 90%;
+  max-width: 400px;
+}
+
+button[type="submit"],
+button {
+  font-size: 24px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(143, 91, 1);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(247, 184, 52);
+}
+
+/* Select styles */
+select {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* List styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid rgb(244, 161, 19);
+  border-radius: 5px;
+}
+
+/* Button styles */
+#viewAllListsBtn {
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(57, 36, 1);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#viewAllListsBtn:hover {
+  background-color: rgb(247, 184, 52);
+}
+
+#createListBtn,
+#viewListBtn,
+#addGear,
+#removeGear {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
     font-size: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
   }
 
-  html {
-    background-color: rgba(242, 242, 200, 0.762);
+  h2 {
+    font-size: 28px;
   }
 
-  /* Form styles */
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
   label {
-    font-size: 24px;
-    margin-right: 10px;
+    font-size: 20px;
   }
-  
+
   input[type="text"],
-  input[type="number"] {
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 0px;
-    width: 60%;
-    max-width: 400px;
-  }
-  
-  button[type="submit"],
-  button {
-    font-size: 24px;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(244, 161, 19);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: rgb(247, 184, 52);
-  }
-  
-  /* Select styles */
-  select {
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 0px;
-    width: 60%;
-    max-width: 400px;
-  }
-  
-  /* List styles */
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 24px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 2px solid rgb(244, 161, 19);
-    border-radius: 5px;
-  }
-  
-  /* Button styles */
-  #viewAllListsBtn {
-    display: block;
-    margin: 0 auto;
-    font-size: 24px;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(57, 36, 1);
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  #viewAllListsBtn:hover {
-    background-color: rgb(247, 184, 52);
-  }
-  
-  #createListBtn,
-  #viewListBtn,
-  #addGear,
-  #removeGear {
-    width: 60%;
-    max-width: 400px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 36px;
-    }
-    
-    h2 {
-      font-size: 28px;
-    }
-    
-    label {
-      font-size: 20px;
-    }
-    
-    input[type="text"],
-    input[type="number"],
+  input[type="number"],
     select {
       font-size: 20px;
       padding: 6px;
